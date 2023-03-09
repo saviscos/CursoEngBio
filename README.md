@@ -21,6 +21,20 @@ rm genomics_de_novo_temp.tar.gz
 
 fastqc B_cepacia_raw_R1.fastq.gz B_cepacia_raw_R2.fastq.gz -t 6
 
+------**-------
+
+
+LINK PARA BAIXAR TRIMMOMATIC
+http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip
+
+colocar em /home/biotec/Documentos/saviocosta/montagem/genomics_de_novo_temp/working
+
+EXTRAI ELE 
+
+sudo java -jar trimmomatic-0.36.jar
+
+
+
 trimmomatic PE B_cepacia_raw_R1.fastq.gz B_cepacia_raw_R2.fastq.gz \
             BCep_R1_paired.fastq.gz BCep_R1_unpaired.fastq.gz \
             BCep_R2_paired.fastq.gz BCep_R2_unpaired.fastq.gz \
