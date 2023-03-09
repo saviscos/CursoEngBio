@@ -34,12 +34,7 @@ EXTRAI ELE
 sudo java -jar trimmomatic-0.36.jar
 
 
-
-trimmomatic PE B_cepacia_raw_R1.fastq.gz B_cepacia_raw_R2.fastq.gz \
-            BCep_R1_paired.fastq.gz BCep_R1_unpaired.fastq.gz \
-            BCep_R2_paired.fastq.gz BCep_R2_unpaired.fastq.gz \
-            LEADING:20 TRAILING:20 SLIDINGWINDOW:5:20 MINLEN:151 \
-            -threads 6
+sudo java -jar trimmomatic-0.36 PE B_cepacia_raw_R1.fastq.gz B_cepacia_raw_R2.fastq.gz BCep_R1_paired.fastq.gz BCep_R1_unpaired.fastq.gz BCep_R2_paired.fastq.gz BCep_R2_unpaired.fastq.gz LEADING:20 TRAILING:20 
             
 spades.py -1 BCep_R1_err_corr.fq.gz -2 BCep_R2_err_corr.fq.gz \
           -o spades-default-assembly/ -t 6 --only-assembler
